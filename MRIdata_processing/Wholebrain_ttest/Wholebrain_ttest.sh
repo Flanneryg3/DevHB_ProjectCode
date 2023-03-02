@@ -2,181 +2,185 @@
 #
 ##################################################
 #
-
-task_con = 'Rhit_Nhit Rcue_Ncue Pcue_Ncue Pmiss_Nmiss'
+datapath=''
+maskpath=''
+task_con='Rhit_Rmiss Phit_Pmiss'
 ##################################################
 for con in ${task_con}; do
 
-  cd /path_to_data/
+  cd ${datapath}/subject_mean/
 
   3dttest++ -prefix ${con}_submean \
-  -mask ./mask+tlrc.BRIK \
-  -setA \
-  -clustsim \
-  /path_to_data/001_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/003_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/004_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/005_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/006_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/007_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/008_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/009_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/010_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/011_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/012_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/013_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/015_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/017_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/018_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/019_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/022_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/023_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/024_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/025_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/026_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/027_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/028_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/029_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/030_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/032_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/037_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/038_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/040_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/043_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/044_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/045_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/046_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/047_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/048_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/054_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/055_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/056_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/057_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/058_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/059_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/060_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/061_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/062_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/063_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/064_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/065_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/068_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/070_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/071_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/072_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/074_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/075_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/077_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/078_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/079_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/080_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/081_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/084_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/085_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/086_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/087_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/088_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/090_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/092_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/093_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/095_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/096_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/097_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/098_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/099_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/102_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/103_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/104_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/106_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/107_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/108_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/110_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/111_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/112_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/114_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/115_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/116_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/117_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/118_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/119_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/122_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/123_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/124_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/125_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/126_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/128_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/130_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/131_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/132_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/133_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/134_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/135_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/136_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/137_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/138_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/139_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/140_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/141_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/142_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/143_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/144_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/145_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/147_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/148_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/150_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/151_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/153_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/154_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/155_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/156_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/157_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/158_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/160_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/161_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/162_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/163_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/166_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/167_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/170_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/172_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/173_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/175_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/176_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/182_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/184_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/185_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/186_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/187_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/188_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/189_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/190_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/191_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/192_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/193_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/194_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/197_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/198_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/199_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/200_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/201_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/203_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/204_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/205_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/207_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/208_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/209_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/210_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/211_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/212_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/213_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/214_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/215_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/220_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/221_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/222_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/226_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/228_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/999_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/228_Rhit_Nhit_mean+tlrc.BRIK \
-  /path_to_data/999_Rhit_Nhit_mean+tlrc.BRIK
+  -mask ${maskpath}/group_GM_mask_70+tlrc.BRIK \
+  -Clustsim 5 \
+  -setA fullsample \
+  1 ${datapath}/subject_mean/001_${con}_mean+tlrc.BRIK \
+  2 ${datapath}/subject_mean/003_${con}_mean+tlrc.BRIK \
+  3 ${datapath}/subject_mean/004_${con}_mean+tlrc.BRIK \
+  4 ${datapath}/subject_mean/005_${con}_mean+tlrc.BRIK \
+  5 ${datapath}/subject_mean/006_${con}_mean+tlrc.BRIK \
+  6 ${datapath}/subject_mean/007_${con}_mean+tlrc.BRIK \
+  7 ${datapath}/subject_mean/008_${con}_mean+tlrc.BRIK \
+  8 ${datapath}/subject_mean/009_${con}_mean+tlrc.BRIK \
+  9 ${datapath}/subject_mean/010_${con}_mean+tlrc.BRIK \
+  10 ${datapath}/subject_mean/011_${con}_mean+tlrc.BRIK \
+  11 ${datapath}/subject_mean/012_${con}_mean+tlrc.BRIK \
+  12 ${datapath}/subject_mean/013_${con}_mean+tlrc.BRIK \
+  13 ${datapath}/subject_mean/015_${con}_mean+tlrc.BRIK \
+  14 ${datapath}/subject_mean/017_${con}_mean+tlrc.BRIK \
+  15 ${datapath}/subject_mean/018_${con}_mean+tlrc.BRIK \
+  16 ${datapath}/subject_mean/019_${con}_mean+tlrc.BRIK \
+  17 ${datapath}/subject_mean/022_${con}_mean+tlrc.BRIK \
+  18 ${datapath}/subject_mean/023_${con}_mean+tlrc.BRIK \
+  19 ${datapath}/subject_mean/024_${con}_mean+tlrc.BRIK \
+  20 ${datapath}/subject_mean/025_${con}_mean+tlrc.BRIK \
+  21 ${datapath}/subject_mean/026_${con}_mean+tlrc.BRIK \
+  22 ${datapath}/subject_mean/027_${con}_mean+tlrc.BRIK \
+  23 ${datapath}/subject_mean/028_${con}_mean+tlrc.BRIK \
+  24 ${datapath}/subject_mean/029_${con}_mean+tlrc.BRIK \
+  25 ${datapath}/subject_mean/030_${con}_mean+tlrc.BRIK \
+  26 ${datapath}/subject_mean/032_${con}_mean+tlrc.BRIK \
+  27 ${datapath}/subject_mean/037_${con}_mean+tlrc.BRIK \
+  28 ${datapath}/subject_mean/038_${con}_mean+tlrc.BRIK \
+  29 ${datapath}/subject_mean/040_${con}_mean+tlrc.BRIK \
+  30 ${datapath}/subject_mean/043_${con}_mean+tlrc.BRIK \
+  31 ${datapath}/subject_mean/044_${con}_mean+tlrc.BRIK \
+  32 ${datapath}/subject_mean/045_${con}_mean+tlrc.BRIK \
+  33 ${datapath}/subject_mean/046_${con}_mean+tlrc.BRIK \
+  34 ${datapath}/subject_mean/047_${con}_mean+tlrc.BRIK \
+  35 ${datapath}/subject_mean/048_${con}_mean+tlrc.BRIK \
+  36 ${datapath}/subject_mean/054_${con}_mean+tlrc.BRIK \
+  37 ${datapath}/subject_mean/055_${con}_mean+tlrc.BRIK \
+  38 ${datapath}/subject_mean/056_${con}_mean+tlrc.BRIK \
+  39 ${datapath}/subject_mean/057_${con}_mean+tlrc.BRIK \
+  40 ${datapath}/subject_mean/058_${con}_mean+tlrc.BRIK \
+  41 ${datapath}/subject_mean/059_${con}_mean+tlrc.BRIK \
+  42 ${datapath}/subject_mean/060_${con}_mean+tlrc.BRIK \
+  43 ${datapath}/subject_mean/061_${con}_mean+tlrc.BRIK \
+  44 ${datapath}/subject_mean/062_${con}_mean+tlrc.BRIK \
+  45 ${datapath}/subject_mean/063_${con}_mean+tlrc.BRIK \
+  46 ${datapath}/subject_mean/064_${con}_mean+tlrc.BRIK \
+  47 ${datapath}/subject_mean/065_${con}_mean+tlrc.BRIK \
+  48 ${datapath}/subject_mean/068_${con}_mean+tlrc.BRIK \
+  49 ${datapath}/subject_mean/070_${con}_mean+tlrc.BRIK \
+  50 ${datapath}/subject_mean/071_${con}_mean+tlrc.BRIK \
+  51 ${datapath}/subject_mean/072_${con}_mean+tlrc.BRIK \
+  52 ${datapath}/subject_mean/074_${con}_mean+tlrc.BRIK \
+  53 ${datapath}/subject_mean/075_${con}_mean+tlrc.BRIK \
+  54 ${datapath}/subject_mean/077_${con}_mean+tlrc.BRIK \
+  55 ${datapath}/subject_mean/078_${con}_mean+tlrc.BRIK \
+  56 ${datapath}/subject_mean/079_${con}_mean+tlrc.BRIK \
+  57 ${datapath}/subject_mean/080_${con}_mean+tlrc.BRIK \
+  58 ${datapath}/subject_mean/081_${con}_mean+tlrc.BRIK \
+  59 ${datapath}/subject_mean/084_${con}_mean+tlrc.BRIK \
+  60 ${datapath}/subject_mean/085_${con}_mean+tlrc.BRIK \
+  61 ${datapath}/subject_mean/086_${con}_mean+tlrc.BRIK \
+  62 ${datapath}/subject_mean/087_${con}_mean+tlrc.BRIK \
+  63 ${datapath}/subject_mean/088_${con}_mean+tlrc.BRIK \
+  64 ${datapath}/subject_mean/090_${con}_mean+tlrc.BRIK \
+  65 ${datapath}/subject_mean/092_${con}_mean+tlrc.BRIK \
+  66 ${datapath}/subject_mean/093_${con}_mean+tlrc.BRIK \
+  67 ${datapath}/subject_mean/095_${con}_mean+tlrc.BRIK \
+  68 ${datapath}/subject_mean/096_${con}_mean+tlrc.BRIK \
+  69 ${datapath}/subject_mean/097_${con}_mean+tlrc.BRIK \
+  70 ${datapath}/subject_mean/098_${con}_mean+tlrc.BRIK \
+  71 ${datapath}/subject_mean/099_${con}_mean+tlrc.BRIK \
+  72 ${datapath}/subject_mean/102_${con}_mean+tlrc.BRIK \
+  73 ${datapath}/subject_mean/103_${con}_mean+tlrc.BRIK \
+  74 ${datapath}/subject_mean/104_${con}_mean+tlrc.BRIK \
+  75 ${datapath}/subject_mean/106_${con}_mean+tlrc.BRIK \
+  76 ${datapath}/subject_mean/107_${con}_mean+tlrc.BRIK \
+  77 ${datapath}/subject_mean/108_${con}_mean+tlrc.BRIK \
+  78 ${datapath}/subject_mean/110_${con}_mean+tlrc.BRIK \
+  79 ${datapath}/subject_mean/111_${con}_mean+tlrc.BRIK \
+  80 ${datapath}/subject_mean/112_${con}_mean+tlrc.BRIK \
+  81 ${datapath}/subject_mean/114_${con}_mean+tlrc.BRIK \
+  82 ${datapath}/subject_mean/115_${con}_mean+tlrc.BRIK \
+  83 ${datapath}/subject_mean/116_${con}_mean+tlrc.BRIK \
+  84 ${datapath}/subject_mean/117_${con}_mean+tlrc.BRIK \
+  85 ${datapath}/subject_mean/118_${con}_mean+tlrc.BRIK \
+  86 ${datapath}/subject_mean/119_${con}_mean+tlrc.BRIK \
+  87 ${datapath}/subject_mean/122_${con}_mean+tlrc.BRIK \
+  88 ${datapath}/subject_mean/123_${con}_mean+tlrc.BRIK \
+  89 ${datapath}/subject_mean/124_${con}_mean+tlrc.BRIK \
+  90 ${datapath}/subject_mean/125_${con}_mean+tlrc.BRIK \
+  91 ${datapath}/subject_mean/126_${con}_mean+tlrc.BRIK \
+  92 ${datapath}/subject_mean/128_${con}_mean+tlrc.BRIK \
+  93 ${datapath}/subject_mean/130_${con}_mean+tlrc.BRIK \
+  94 ${datapath}/subject_mean/131_${con}_mean+tlrc.BRIK \
+  95 ${datapath}/subject_mean/132_${con}_mean+tlrc.BRIK \
+  96 ${datapath}/subject_mean/133_${con}_mean+tlrc.BRIK \
+  97 ${datapath}/subject_mean/134_${con}_mean+tlrc.BRIK \
+  98 ${datapath}/subject_mean/135_${con}_mean+tlrc.BRIK \
+  99 ${datapath}/subject_mean/136_${con}_mean+tlrc.BRIK \
+  100 ${datapath}/subject_mean/137_${con}_mean+tlrc.BRIK \
+  101 ${datapath}/subject_mean/138_${con}_mean+tlrc.BRIK \
+  102 ${datapath}/subject_mean/139_${con}_mean+tlrc.BRIK \
+  103 ${datapath}/subject_mean/140_${con}_mean+tlrc.BRIK \
+  104 ${datapath}/subject_mean/141_${con}_mean+tlrc.BRIK \
+  105 ${datapath}/subject_mean/142_${con}_mean+tlrc.BRIK \
+  106 ${datapath}/subject_mean/143_${con}_mean+tlrc.BRIK \
+  107 ${datapath}/subject_mean/144_${con}_mean+tlrc.BRIK \
+  108 ${datapath}/subject_mean/145_${con}_mean+tlrc.BRIK \
+  109 ${datapath}/subject_mean/147_${con}_mean+tlrc.BRIK \
+  110 ${datapath}/subject_mean/148_${con}_mean+tlrc.BRIK \
+  111 ${datapath}/subject_mean/150_${con}_mean+tlrc.BRIK \
+  112 ${datapath}/subject_mean/151_${con}_mean+tlrc.BRIK \
+  113 ${datapath}/subject_mean/153_${con}_mean+tlrc.BRIK \
+  114 ${datapath}/subject_mean/154_${con}_mean+tlrc.BRIK \
+  115 ${datapath}/subject_mean/155_${con}_mean+tlrc.BRIK \
+  116 ${datapath}/subject_mean/156_${con}_mean+tlrc.BRIK \
+  117 ${datapath}/subject_mean/157_${con}_mean+tlrc.BRIK \
+  118 ${datapath}/subject_mean/158_${con}_mean+tlrc.BRIK \
+  119 ${datapath}/subject_mean/160_${con}_mean+tlrc.BRIK \
+  120 ${datapath}/subject_mean/161_${con}_mean+tlrc.BRIK \
+  121 ${datapath}/subject_mean/162_${con}_mean+tlrc.BRIK \
+  122 ${datapath}/subject_mean/163_${con}_mean+tlrc.BRIK \
+  123 ${datapath}/subject_mean/166_${con}_mean+tlrc.BRIK \
+  124 ${datapath}/subject_mean/167_${con}_mean+tlrc.BRIK \
+  125 ${datapath}/subject_mean/170_${con}_mean+tlrc.BRIK \
+  126 ${datapath}/subject_mean/172_${con}_mean+tlrc.BRIK \
+  127 ${datapath}/subject_mean/173_${con}_mean+tlrc.BRIK \
+  128 ${datapath}/subject_mean/175_${con}_mean+tlrc.BRIK \
+  129 ${datapath}/subject_mean/176_${con}_mean+tlrc.BRIK \
+  130 ${datapath}/subject_mean/182_${con}_mean+tlrc.BRIK \
+  131 ${datapath}/subject_mean/184_${con}_mean+tlrc.BRIK \
+  132 ${datapath}/subject_mean/185_${con}_mean+tlrc.BRIK \
+  133 ${datapath}/subject_mean/186_${con}_mean+tlrc.BRIK \
+  134 ${datapath}/subject_mean/187_${con}_mean+tlrc.BRIK \
+  135 ${datapath}/subject_mean/188_${con}_mean+tlrc.BRIK \
+  136 ${datapath}/subject_mean/189_${con}_mean+tlrc.BRIK \
+  137 ${datapath}/subject_mean/190_${con}_mean+tlrc.BRIK \
+  138 ${datapath}/subject_mean/191_${con}_mean+tlrc.BRIK \
+  139 ${datapath}/subject_mean/192_${con}_mean+tlrc.BRIK \
+  140 ${datapath}/subject_mean/193_${con}_mean+tlrc.BRIK \
+  141 ${datapath}/subject_mean/194_${con}_mean+tlrc.BRIK \
+  142 ${datapath}/subject_mean/197_${con}_mean+tlrc.BRIK \
+  143 ${datapath}/subject_mean/198_${con}_mean+tlrc.BRIK \
+  144 ${datapath}/subject_mean/199_${con}_mean+tlrc.BRIK \
+  145 ${datapath}/subject_mean/200_${con}_mean+tlrc.BRIK \
+  146 ${datapath}/subject_mean/201_${con}_mean+tlrc.BRIK \
+  147 ${datapath}/subject_mean/203_${con}_mean+tlrc.BRIK \
+  148 ${datapath}/subject_mean/204_${con}_mean+tlrc.BRIK \
+  149 ${datapath}/subject_mean/205_${con}_mean+tlrc.BRIK \
+  150 ${datapath}/subject_mean/207_${con}_mean+tlrc.BRIK \
+  151 ${datapath}/subject_mean/208_${con}_mean+tlrc.BRIK \
+  152 ${datapath}/subject_mean/209_${con}_mean+tlrc.BRIK \
+  153 ${datapath}/subject_mean/210_${con}_mean+tlrc.BRIK \
+  154 ${datapath}/subject_mean/211_${con}_mean+tlrc.BRIK \
+  155 ${datapath}/subject_mean/212_${con}_mean+tlrc.BRIK \
+  156 ${datapath}/subject_mean/213_${con}_mean+tlrc.BRIK \
+  157 ${datapath}/subject_mean/214_${con}_mean+tlrc.BRIK \
+  158 ${datapath}/subject_mean/215_${con}_mean+tlrc.BRIK \
+  159 ${datapath}/subject_mean/220_${con}_mean+tlrc.BRIK \
+  160 ${datapath}/subject_mean/221_${con}_mean+tlrc.BRIK \
+  161 ${datapath}/subject_mean/222_${con}_mean+tlrc.BRIK \
+  162 ${datapath}/subject_mean/226_${con}_mean+tlrc.BRIK \
+  163 ${datapath}/subject_mean/228_${con}_mean+tlrc.BRIK \
+  164 ${datapath}/subject_mean/999_${con}_mean+tlrc.BRIK \
+  165 ${datapath}/subject_mean/228_${con}_mean+tlrc.BRIK \
+  166 ${datapath}/subject_mean/999_${con}_mean+tlrc.BRIK
+
+  mv ${datapath}/subject_mean/${con}_submean* ${maskpath}/Wholebrain_ttest/
+  mv ${datapath}/subject_mean/*${con}*CSim* ${maskpath}/Wholebrain_ttest/
 done
